@@ -52,10 +52,10 @@ module NgTemplates
         #   app.assets.register_engine ".#{ext}", mimeless_engine
         # end
 
-        app.assets.register_mime_type 'text/ng-html', extensions: ['.nghtml']
-        app.assets.register_mime_type 'text/ng-haml', extensions: ['.nghaml']
-        app.assets.register_transformer 'text/ng-haml', 'application/javascript', NgTemplates::HamlProcessor
-        app.assets.register_transformer 'text/ng-html', 'application/javascript', NgTemplates::Processor
+        app.config.assets.register_mime_type 'text/ng-html', extensions: ['.nghtml']
+        app.config.assets.register_mime_type 'text/ng-haml', extensions: ['.nghaml']
+        app.config.assets.register_transformer 'text/ng-haml', 'application/javascript', NgTemplates::HamlProcessor
+        app.config.assets.register_transformer 'text/ng-html', 'application/javascript', NgTemplates::Processor
       end
 
       # Sprockets Cache Busting
